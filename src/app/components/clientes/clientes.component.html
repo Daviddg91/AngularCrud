@@ -1,0 +1,46 @@
+<p>usuarios works!</p>
+<div class="table-responsive">
+<table     class="table  table-bordered table-striped table-hover">
+    <thead>
+  <tr>
+    <th>ID</th>
+
+    <th class=" " >Nombre</th>
+    <th class=" "   >Apellidos</th>
+    <th class=" "  >DNI</th>
+    <th class=" "  >Correo</th>
+    <th class=" "  >Telefono </th>
+    <th class=" "  >Direccion</th>
+    <th class=" "  >CP</th>
+    <th class=" "   >Edad</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+    
+  </tr>
+     
+    </thead>
+ 
+
+<tbody id="tablebody">
+    <tr *ngFor="let usuario of usuarios">
+        
+        <td>{{usuario.id}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellidos}}</td>
+        <td>{{usuario.dni}}</td>
+        <td>{{usuario.correo}}</td>
+        <td>{{usuario.telefono}}</td>
+        <td>{{usuario.direccion}}</td>
+        <td>{{usuario.cp}}</td>
+        <td>{{usuario.edad}}</td>
+  
+        <td>
+            <button type="button" class="btn btn-success btn-sm move-right" >Edit</button>
+        </td>
+<td> 
+            <button type="button" class="btn btn-danger btn-sm"  >Remove</button>
+        </td>
+    </tr>
+</tbody>
+ </table>
+</div>

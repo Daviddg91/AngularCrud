@@ -2,7 +2,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-const routes: Routes = [];
+import { AppComponent } from './app.component';
+
+import {PedidosComponent} from "./components/pedidos/pedidos.component";
+import {PageNotFoundComponentComponent} from "./components/page-not-found-component/page-not-found-component.component";
+import {ListaUsuariosComponent} from "./components/lista-usuarios/lista-usuarios.component";
+import {ClientesComponent} from "./components/clientes/clientes.component";
+const routes: Routes = [
+
+  { path: '', redirectTo: '/index', pathMatch: 'full' },
+  { path: 'index', component: AppComponent },
+
+{ path: 'pedidos', component: PedidosComponent },
+ 
+{ path: 'clientes', component: ClientesComponent },
+  { path: '**', component: PageNotFoundComponentComponent }
+
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
