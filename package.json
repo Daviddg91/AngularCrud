@@ -25,7 +25,10 @@
     "datatables.net-dt": "^1.10.20",
     "datatables.net-responsive": "^2.2.3",
     "datatables.net-responsive-dt": "^2.2.3",
+    "install": "^0.13.0",
     "jquery": "^3.4.1",
+    "primeicons": "^2.0.0",
+    "primeng": "^9.0.6",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

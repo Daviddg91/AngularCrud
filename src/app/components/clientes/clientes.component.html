@@ -1,6 +1,6 @@
 <p>usuarios works!</p>
-<div class="table-responsive">
-<table     class="table  table-bordered table-striped table-hover">
+<div class="col-12">
+<table     class="table  col-12 table-bordered table-striped table-hover">
     <thead>
   <tr>
     <th>ID</th>
@@ -35,12 +35,29 @@
         <td>{{usuario.edad}}</td>
   
         <td>
-            <button type="button" class="btn btn-success btn-sm move-right" >Edit</button>
+            <a type="button" class="btn btn-success btn-sm " routerLink="/details-usuarios/{{usuario.dni}}" >Editar</a>
         </td>
 <td> 
-            <button type="button" class="btn btn-danger btn-sm"  >Remove</button>
+            <a type="button" class="btn btn-danger btn-sm" (click)="showDialog(usuario.nombre,usuario.dni)"  >Eliminar</a>
         </td>
     </tr>
 </tbody>
  </table>
 </div>
+ 
+
+
+ <p-dialog header="Confirme borrar cliente" [(visible)]="display" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+        <div >¿ estas seguro que desea borrar a el cliente {{nombreUsuarioModal}} ?</div>
+        <p-footer>
+            <button type="button" pButton icon="pi pi-check" (click)="display=false" label="No">No</button>
+            <button type="button" pButton icon="pi pi-times" (click)="borrarCliente()" label="Si" class="ui-button-secondary">Si</button>
+        </p-footer>
+</p-dialog>
+    
+<p-dialog header="Cliente borrado" [(visible)]="displayResolve" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+        <div > {{respuestaModalConfirmationDelete}} </div>
+    
+</p-dialog>

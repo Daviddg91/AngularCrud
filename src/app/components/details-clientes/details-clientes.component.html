@@ -1,0 +1,38 @@
+<p>details-clientes works!</p>
+
+ <div class="col-8">
+<div class="">
+    <label for="nombre" >Nombre </label>
+    <input  [(ngModel)]="usuarios.nombre" type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre">
+</div>
+<div class="">
+    <label for="apellidos" >Apellidos </label>
+    <input  [(ngModel)]="usuarios.apellidos" type="text" class="form-control" id="apellidos" placeholder="Ingresar Apellidos">
+</div>
+<div class="form group">
+    <label for="edad" >edad </label>
+    <input  [(ngModel)]="usuarios.edad" type="number" class="form-control" id="edad" placeholder="Ingresar edad">
+</div>
+<div class="form group">
+    <label for="direccion" >direccion </label>
+    <input  [(ngModel)]="usuarios.direccion" type="text" class="form-control" id="direccion" placeholder="Ingresar direccion">
+</div>
+<div class="form group">
+    <label for="dni" >dni </label>
+    <input  [(ngModel)]="usuarios.dni" type="text" class="form-control" id="dni" placeholder="Ingresar dni">
+</div>
+<div class="form group">
+    <label for="cp" >cp </label>
+    <input  [(ngModel)]="usuarios.cp" type="text" class="form-control" id="cp" placeholder="Ingresar cp">
+</div>
+<div class="form group">
+    <label for="telefono" >telefono </label>
+    <input  [(ngModel)]="usuarios.telefono" type="number" class="form-control" id="telefono" placeholder="Ingresar telefono">
+</div>
+<div class="form group">
+    <label for="correo" >correo </label>
+    <input  [(ngModel)]="usuarios.correo" type="email" class="form-control" id="correo" placeholder="Ingresar correo">
+</div>
+
+<button (click)="modificarUsuario()" class="btn btn-primary ">Modificar Usuario</button>
+</div>

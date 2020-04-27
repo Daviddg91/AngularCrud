@@ -9,9 +9,12 @@ import {Usuarios} from "../../interfaces/usuarios";
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit{
-
+  
   usuarios =[];
-  constructor(private usuariosService: DataApiAppUserService,  private chRef: ChangeDetectorRef) { }
+  constructor(private usuariosService: DataApiAppUserService,  private chRef: ChangeDetectorRef) { 
+  
+
+  }
   dtOptions: any;
   dataTable: any;
   ngOnInit(): void {
@@ -54,5 +57,57 @@ export class ClientesComponent implements OnInit{
  
  
 
+}
+display: boolean = false;
+displayResolve: boolean=false;
+ModalDni: string;
+nombreUsuarioModal: string;
+showDialog(nombreUsuario: string,dni:string) {
+  this.nombreUsuarioModal=nombreUsuario;
+  this.display = true;
+  this.ModalDni=dni;
+ 
+}
+ 
+respuestaModalConfirmationDelete: string;
+esconderModalConfirmacion():void{
+  
+
+  this.display = false;
+}
+displayModalResolver():void{
+  
+
+  this.displayResolve = true;
+}
+esconderModalResolver():void{
+  
+
+  this.displayResolve = false;
+}
+borrarCliente( ){
+  
+  this.usuariosService.deleteUserByDni(this.ModalDni).subscribe(
+
+    data  => {
+    
+    this.respuestaModalConfirmationDelete= data;
+    console.log(data);
+    setTimeout(() => this.esconderModalConfirmacion(), 1000);
+
+    setTimeout(() => this.displayModalResolver(), 2000);
+
+    setTimeout(() => this.esconderModalResolver(), 3000);
+
+ 
+    },
+    
+    error  => {
+    
+    this.respuestaModalConfirmationDelete = error;
+    
+    }
+    
+    );
 }
 }
