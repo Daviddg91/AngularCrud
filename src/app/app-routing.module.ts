@@ -9,6 +9,7 @@ import {PageNotFoundComponentComponent} from "./components/page-not-found-compon
  import {ClientesComponent} from "./components/clientes/clientes.component";
 import {CreateClientesComponent} from "./components/create-clientes/create-clientes.component";
 import {DetailsClientesComponent} from "./components/details-clientes/details-clientes.component";
+
 const routes: Routes = [
 
   { path: '', redirectTo: '/index', pathMatch: 'full' },

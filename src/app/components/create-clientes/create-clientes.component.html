@@ -1,5 +1,5 @@
-<p>create-clientes works!</p>
- <div class="col-12">
+<h1><p>Crear nuevos usuarios</p></h1>
+ <div class="col-12 creaClienteForm">
 <div class="">
     <label for="nombre" >Nombre </label>
     <input  [(ngModel)]="usuarios.nombre" type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre">
@@ -64,4 +64,15 @@
     
 </div>
 <button (click)="saveUsuario()" class="btn btn-primary ">Guardar Usuario</button>
+
+
+<p-dialog header="Operación exitosa" [(visible)]="display" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+[draggable]="false" [resizable]="false">
+    <div >Cliente creado con exito </div>
+    <p-footer>
+    </p-footer>
+</p-dialog>
+
+
+
 </div>

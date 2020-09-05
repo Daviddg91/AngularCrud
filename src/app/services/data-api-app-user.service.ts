@@ -27,10 +27,25 @@ export class DataApiAppUserService {
  
   saveUsuarioAPI(usuario: Usuarios){
   var url_api ="http://localhost:8080/users";
-  let headers = new HttpHeaders();
- // headers = headers.set('Content-Type', 'application; charset=utf-8');
+  let headers = new HttpHeaders()
+  headers .set('Content-type', 'application/json')
   
-  return  this.http.post(url_api, usuario);
+  return  this.http.post(url_api, usuario , { 'headers':headers , responseType: 'text'});
+
+}
+
+modifyUsuarioAPI(usuario: Usuarios){
+  var url_api ="http://localhost:8080/users";
+
+  let headers = new HttpHeaders()
+  headers .set('Content-type', 'application/json')
+  headers .set('Access-Control-Allow-Origin', '*')
+
+console.log(JSON.stringify(usuario));
+console.log(usuario);
+ return this.http.put(url_api, usuario,{'headers':headers , responseType: 'text'});
+
+
 
 }
 
