@@ -13,9 +13,9 @@ import {DetailsClientesComponent} from "./components/details-clientes/details-cl
 const routes: Routes = [
 
   { path: '', redirectTo: '/index', pathMatch: 'full' },
-  { path: 'index', component: AppComponent },
+  
 
-{ path: 'pedidos', component: PedidosComponent },
+//{ path: 'pedidos', component: PedidosComponent },
 { path: 'crearUsuarios', component: CreateClientesComponent },
 { path: 'details-usuarios/:dni', component: DetailsClientesComponent },
 { path: 'clientes', component: ClientesComponent },

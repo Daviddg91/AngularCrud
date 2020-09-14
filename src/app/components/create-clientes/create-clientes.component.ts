@@ -76,9 +76,7 @@ arrAlert.each(function( i ) {
   
 
 display: boolean = false;
-displayResolve: boolean=false;
-ModalDni: string;
-nombreUsuarioModal: string;
+
 showDialog() {
 
   this.display = true;
@@ -86,8 +84,7 @@ showDialog() {
  
 }
  
-respuestaModalConfirmationDelete: string;
-esconderModalConfirmacion():void{
+ esconderModalConfirmacion():void{
   
 
   this.display = false;
