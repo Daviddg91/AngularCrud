@@ -37,7 +37,7 @@ export class DetailsClientesComponent implements OnInit {
     modificarUsuario(){
     
       this.apiUsurios2.modifyUsuarioAPI(this.usuarioEditable).subscribe(  (response) => {                           //Next callback
-        alert(response);
+        //alert(response);
         this.showDialog();
         setTimeout(() => this.esconderModalConfirmacion(), 3000);
         setTimeout(() => this.router.navigate(['/clientes']) , 3600);

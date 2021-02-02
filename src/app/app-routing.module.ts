@@ -12,7 +12,7 @@ import {DetailsClientesComponent} from "./components/details-clientes/details-cl
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/index', pathMatch: 'full' },
+  { path: '', redirectTo: '/clientes', pathMatch: 'full' },
   
 
 //{ path: 'pedidos', component: PedidosComponent },
