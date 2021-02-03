@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {DataApiAppUserService} from  "../../services/data-api-app-user.service";
 import {Usuarios} from "../../interfaces/usuarios";
-
+import {router} from "angular-route"
 
 @Component({
   selector: 'app-clientes',
@@ -85,6 +85,10 @@ esconderModalResolver():void{
 
   this.displayResolve = false;
 }
+refreshPage(){
+  window.location.reload();
+
+}
 borrarCliente( ){
   
   this.usuariosService.deleteUserByDni(this.ModalDni).subscribe(
@@ -92,16 +96,19 @@ borrarCliente( ){
     data  => {
     
     this.respuestaModalConfirmationDelete= data;
-    console.log(data);
+    //console.log(data);
     setTimeout(() => this.esconderModalConfirmacion(), 1000);
 
     setTimeout(() => this.displayModalResolver(), 2000);
 
     setTimeout(() => this.esconderModalResolver(), 3000);
 
- 
-    },
+     
     
+    setTimeout(() => this.refreshPage(), 4000);
+
+     
+    },
     error  => {
     
     this.respuestaModalConfirmationDelete = error;

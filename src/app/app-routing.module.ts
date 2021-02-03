@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import {PedidosComponent} from "./components/pedidos/pedidos.component";
+//import {PedidosComponent} from "./components/pedidos/pedidos.component";
 import {PageNotFoundComponentComponent} from "./components/page-not-found-component/page-not-found-component.component";
  import {ClientesComponent} from "./components/clientes/clientes.component";
 import {CreateClientesComponent} from "./components/create-clientes/create-clientes.component";

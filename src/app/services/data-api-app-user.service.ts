@@ -14,8 +14,9 @@ export class DataApiAppUserService {
     
   }
     
-  url_origin = "http://localhost:8080/";
-
+  //url_origin = "http://localhost:8080/";
+  url_origin = "http://78.30.63.64:8080/";
+  
   getAllUsers() {
    
     var url_api =this.url_origin+"users";
